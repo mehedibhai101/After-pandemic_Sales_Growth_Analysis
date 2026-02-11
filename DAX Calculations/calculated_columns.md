@@ -1,4 +1,4 @@
-### Key Calculated Columns and Formulas:
+### Customer Table
 
 * **Age**: Calculates the customer's current age based on their birth date.
 * **Formula**: `DATEDIFF( 'Dim Customer'[Birth Date], TODAY(), YEAR )`
@@ -25,6 +25,7 @@ SWITCH(
 
 * **Formatting**: `Text`
 
+### Sales Table
 
 * **Return Amount**: Calculates the financial value of returned items by pulling the price from the Product dimension.
 * **Formula**: `RELATED( 'Dim Product'[Price] ) * 'Fact Return'[Return Quantity]`
