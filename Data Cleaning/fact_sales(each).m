@@ -1,3 +1,5 @@
+// ⚠ Each sales query's load was diabled after appending them together into a single fact_sales query.
+
 let
     // Extracted the base file from the local Sales directory.
     Source_Folder = Folder.Files("your_Sales_folder_path"),
