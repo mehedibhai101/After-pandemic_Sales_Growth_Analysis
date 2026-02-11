@@ -1,14 +1,14 @@
 let
-    // 1. Load the data from CSV source with standard UTF-8 encoding
+    // Load the data from CSV source with standard UTF-8 encoding
     Source_Data = Csv.Document(File.Contents("your_file_path.csv"), [Delimiter=",", Columns=4, Encoding=65001, QuoteStyle=QuoteStyle.None]),
 
-    // 2. Promote the first row to headers
+    // Promote the first row to headers
     Promote_Headers = Table.PromoteHeaders(Source_Data, [PromoteAllScalars=true]),
 
-    // 3. Remove the footer row before applying type transformations
+    // Remove the footer row before applying type transformations
     Remove_Bottom_Rows = Table.RemoveLastN(Promote_Headers, 1),
 
-    // 4. Consolidate: Rename "SalesTerritoryKey" to "Territory Key" and set all Data Types in one strategic step
+    // Consolidate: Rename "SalesTerritoryKey" to "Territory Key" and set all Data Types in one strategic step
     Set_Schema_And_Types = Table.TransformColumnTypes(
         Table.RenameColumns(Remove_Bottom_Rows, {{"SalesTerritoryKey", "Territory Key"}}),
         {
