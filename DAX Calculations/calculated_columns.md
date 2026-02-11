@@ -1,8 +1,9 @@
 ### Customer Table
 
 * **Age**: Calculates the customer's current age based on their birth date.
- * **Formula**: `DATEDIFF( 'Dim Customer'[Birth Date], TODAY(), YEAR )`
- * **Formatting**: `0`
+  * **Formula**: `DATEDIFF( 'Dim Customer'[Birth Date], TODAY(), YEAR )`
+  * **Formatting**: `0`
+
 
 * **Age (groups)**: Segments customers into specific age brackets for demographic analysis.
   * **Formula**:
