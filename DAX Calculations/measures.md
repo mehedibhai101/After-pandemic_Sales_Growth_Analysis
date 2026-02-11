@@ -65,7 +65,8 @@
 
 These measures calculate the percentage change compared to the previous month using `DATEADD`.
 
-* **MoM Growth% (Sales)**: ```DIVIDE(([Total Sales] - CALCULATE([Total Sales], DATEADD('Dim Date'[Date], -1, MONTH))), CALCULATE([Total Sales], DATEADD('Dim Date'[Date], -1, MONTH)))```
+* **MoM Growth% (Sales)**: 
+ ```DIVIDE(([Total Sales] - CALCULATE([Total Sales], DATEADD('Dim Date'[Date], -1, MONTH))), CALCULATE([Total Sales], DATEADD('Dim Date'[Date], -1, MONTH)))```
 * **MoM Growth% (Cost)**: `DIVIDE(([Total Cost] - CALCULATE([Total Cost], DATEADD('Dim Date'[Date], -1, MONTH))), CALCULATE([Total Cost], DATEADD('Dim Date'[Date], -1, MONTH)))`
 * **MoM Growth% (Profit)**: `DIVIDE(([Profit] - CALCULATE([Profit], DATEADD('Dim Date'[Date], -1, MONTH))), CALCULATE([Profit], DATEADD('Dim Date'[Date], -1, MONTH)))`
 * **MoM Growth% (Orders)**: `DIVIDE(([Total Orders] - CALCULATE([Total Orders], DATEADD('Dim Date'[Date], -1, MONTH))), CALCULATE([Total Orders], DATEADD('Dim Date'[Date], -1, MONTH)))`
