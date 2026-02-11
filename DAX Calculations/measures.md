@@ -1,0 +1,85 @@
+### Key Metrics and Formulas:
+
+* **Total Sales**: Sum of sales revenue from the fact table.
+  * **Formula**: `SUM('Fact Sales'[Sales Amount])`
+  * **Formatting**: `$#,0.00;($#,0.00);$#,0.00`
+
+
+* **Total Cost**: Total cost of goods sold aggregated from sales records.
+  * **Formula**: `SUM('Fact Sales'[Total Cost])`
+  * **Formatting**: `$#,0.###############`
+
+
+* **Profit**: Total revenue minus total costs.
+  * **Formula**: `[Total Sales] - [Total Cost]`
+  * **Formatting**: `$#,0.0`
+
+
+* **Profit Margin**: The percentage of revenue that exceeds costs.
+  * **Formula**: `[Profit] / [Total Sales]`
+  * **Formatting**: `0.00%`
+
+
+* **Total Orders**: Total number of unique order transactions.
+  * **Formula**: `DISTINCTCOUNT('Fact Sales'[Order Number])`
+  * **Formatting**: `0`
+
+
+* **Total Customers**: Count of unique customers who placed orders.
+  * **Formula**: `DISTINCTCOUNT('Fact Sales'[Customer Key])`
+  * **Formatting**: `0`
+
+
+* **Total Qty Sold**: Sum of all units sold across all transactions.
+  * **Formula**: `SUM('Fact Sales'[Quantity])`
+  * **Formatting**: `0`
+
+
+* **AOV (Average Order Value)**: The average revenue generated per unique order.
+  * **Formula**: `DIVIDE([Total Sales], [Total Orders], 0)`
+  * **Formatting**: `$#,0.0`
+
+
+* **Return Amount**: Sum of revenue lost due to returned items.
+  * **Formula**: `SUM('Fact Return'[Return Amount])`
+  * **Formatting**: `$#,0.0`
+
+
+* **Return Qty**: Total number of items returned.
+  * **Formula**: `SUM('Fact Return'[Return Quantity])`
+  * **Formatting**: `#,0`
+
+
+* **Return%**: The ratio of units returned to total units sold.
+  * **Formula**: `[Return Qty] / [Total Qty Sold]`
+  * **Formatting**: `0.00%`
+
+
+* **Recency**: Number of days since the most recent order was placed.
+  * **Formula**: `DATEDIFF(MAX('Fact Sales'[Order Date]), TODAY(), DAY)`
+  * **Formatting**: `0`
+
+
+
+### Month-over-Month (MoM) Growth Metrics:
+
+These measures calculate the percentage change compared to the previous month using `DATEADD`.
+
+* **MoM Growth% (Sales)**: `DIVIDE(([Total Sales] - CALCULATE([Total Sales], DATEADD('Dim Date'[Date], -1, MONTH))), CALCULATE([Total Sales], DATEADD('Dim Date'[Date], -1, MONTH)))`
+* **MoM Growth% (Cost)**: `DIVIDE(([Total Cost] - CALCULATE([Total Cost], DATEADD('Dim Date'[Date], -1, MONTH))), CALCULATE([Total Cost], DATEADD('Dim Date'[Date], -1, MONTH)))`
+* **MoM Growth% (Profit)**: `DIVIDE(([Profit] - CALCULATE([Profit], DATEADD('Dim Date'[Date], -1, MONTH))), CALCULATE([Profit], DATEADD('Dim Date'[Date], -1, MONTH)))`
+* **MoM Growth% (Orders)**: `DIVIDE(([Total Orders] - CALCULATE([Total Orders], DATEADD('Dim Date'[Date], -1, MONTH))), CALCULATE([Total Orders], DATEADD('Dim Date'[Date], -1, MONTH)))`
+* **MoM Growth% (Qty Sold)**: `DIVIDE(([Total Qty Sold] - CALCULATE([Total Qty Sold], DATEADD('Dim Date'[Date], -1, MONTH))), CALCULATE([Total Qty Sold], DATEADD('Dim Date'[Date], -1, MONTH)))`
+* **MoM Growth% (AOV)**: `DIVIDE(([AOV] - CALCULATE([AOV], DATEADD('Dim Date'[Date], -1, MONTH))), CALCULATE([AOV], DATEADD('Dim Date'[Date], -1, MONTH)))`
+
+### KPI Formatting & Logic:
+
+* **Growth Indicators**: All MoM metrics use a custom format string to display an **Up Arrow** (🟢) for positive growth and a **Down Arrow** (🔴) for negative growth.
+  * **Formatting**: `UNICHAR(129157) & " 0.00%; " & UNICHAR(129158) & " 0.00%; " & "0.00%"`
+  
+* **Color Logic**: KPI Color measures (e.g., `Color(Sales)`) return specific Hex codes (`#6FB679` for Green, `#DE6A73` for Red) based on whether growth is positive or negative, allowing for dynamic conditional formatting in dashboard visuals.
+  * **Formula**:
+  ```dax
+  Color(Sales) = IF( [MoM Growth% (Sales)] >= 0, "#6FB679", "#DE6A73" )
+  
+  ```
