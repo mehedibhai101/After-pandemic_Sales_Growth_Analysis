@@ -65,15 +65,61 @@
 
 These measures calculate the percentage change compared to the previous month using `DATEADD`.
 
-* **MoM Growth% (Sales)**: 
- ```
- DIVIDE(([Total Sales] - CALCULATE([Total Sales], DATEADD('Dim Date'[Date], -1, MONTH))), CALCULATE([Total Sales], DATEADD('Dim Date'[Date], -1, MONTH)))
- ```
-* **MoM Growth% (Cost)**: `DIVIDE(([Total Cost] - CALCULATE([Total Cost], DATEADD('Dim Date'[Date], -1, MONTH))), CALCULATE([Total Cost], DATEADD('Dim Date'[Date], -1, MONTH)))`
-* **MoM Growth% (Profit)**: `DIVIDE(([Profit] - CALCULATE([Profit], DATEADD('Dim Date'[Date], -1, MONTH))), CALCULATE([Profit], DATEADD('Dim Date'[Date], -1, MONTH)))`
-* **MoM Growth% (Orders)**: `DIVIDE(([Total Orders] - CALCULATE([Total Orders], DATEADD('Dim Date'[Date], -1, MONTH))), CALCULATE([Total Orders], DATEADD('Dim Date'[Date], -1, MONTH)))`
-* **MoM Growth% (Qty Sold)**: `DIVIDE(([Total Qty Sold] - CALCULATE([Total Qty Sold], DATEADD('Dim Date'[Date], -1, MONTH))), CALCULATE([Total Qty Sold], DATEADD('Dim Date'[Date], -1, MONTH)))`
-* **MoM Growth% (AOV)**: `DIVIDE(([AOV] - CALCULATE([AOV], DATEADD('Dim Date'[Date], -1, MONTH))), CALCULATE([AOV], DATEADD('Dim Date'[Date], -1, MONTH)))`
+### Key Metrics and Formulas (Formatted):
+
+* **MoM Growth% (Sales)**:
+
+```dax
+VAR _pm = CALCULATE([Total Sales], DATEADD('Dim Date'[Date], -1, MONTH))
+RETURN 
+ DIVIDE(([Total Sales] - _pm), _pm)
+
+```
+
+* **MoM Growth% (Cost)**:
+
+```dax
+VAR _pm = CALCULATE([Total Cost], DATEADD('Dim Date'[Date], -1, MONTH))
+RETURN 
+ DIVIDE(([Total Cost] - _pm), _pm)
+
+```
+
+* **MoM Growth% (Profit)**:
+
+```dax
+VAR _pm = CALCULATE([Profit], DATEADD('Dim Date'[Date], -1, MONTH))
+RETURN 
+ DIVIDE(([Profit] - _pm), _pm)
+
+```
+
+* **MoM Growth% (Orders)**:
+
+```dax
+VAR _pm = CALCULATE([Total Orders], DATEADD('Dim Date'[Date], -1, MONTH))
+RETURN 
+ DIVIDE(([Total Orders] - _pm), _pm)
+
+```
+
+* **MoM Growth% (Qty Sold)**:
+
+```dax
+VAR _pm = CALCULATE([Total Qty Sold], DATEADD('Dim Date'[Date], -1, MONTH))
+RETURN 
+ DIVIDE(([Total Qty Sold] - _pm), _pm)
+
+```
+
+* **MoM Growth% (AOV)**:
+
+```dax
+VAR _pm = CALCULATE([AOV], DATEADD('Dim Date'[Date], -1, MONTH))
+RETURN 
+ DIVIDE(([AOV] - _pm), _pm)
+
+```
 
 ### KPI Formatting & Logic:
 
