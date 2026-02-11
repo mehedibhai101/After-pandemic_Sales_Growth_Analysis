@@ -1,3 +1,5 @@
+// ⚠ This query's load was diabled after merging it into dim_products in order to avoid snowflake schema.
+
 let
     // Extracted the product subcategory data from the CSV source.
     Source_Data = Csv.Document(File.Contents("your_file_path.csv"),[Delimiter=",", Columns=3, Encoding=1252, QuoteStyle=QuoteStyle.None]),
