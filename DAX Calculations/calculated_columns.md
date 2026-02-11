@@ -20,7 +20,6 @@ SWITCH(
     'Dim Customer'[Age] > 105, "above 105",
     "Other"
 )
-
 ```
 
 
