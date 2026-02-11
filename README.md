@@ -1,19 +1,23 @@
 # Project Background: TurboFront Retail Analytics
 
-**TurboFront** is a global leader in high-performance cycling equipment and components. Historically known for equipping professional racing teams, the company faced an existential crisis during the 2020 pandemic as competitive events were cancelled worldwide. In a strategic pivot, TurboFront shifted its focus to **"Urban Resilience"**—targeting the booming market of commuters and fitness enthusiasts seeking alternatives to public transit.
+**TurboFront** is a global leader in high-performance cycling equipment and components. Historically known for equipping professional racing teams, the company faced an existential crisis during the 2020 pandemic as competitive events were cancelled worldwide. In a strategic pivot, TurboFront shifted its focus to **"Urban Resilience"**,targeting the booming market of commuters and fitness enthusiasts seeking alternatives to public transit.
 
 This project analyzes a comprehensive dataset spanning **2020–2022**, capturing the company's turbulent transition. As a Lead Data Analyst, my objective was to evaluate the success of this pivot, identify regional growth engines, and diagnose the "Profit Leaks" hidden within the company's **$24.9 Million** revenue stream. The goal is to provide a data-driven roadmap for the post-pandemic era, moving from reactive survival to proactive market dominance.
 
 Insights and recommendations are provided on the following key areas:
 
-* **Category 1: The "Pandemic Pivot" Trajectory** (Revenue Velocity & Year-over-Year Growth)
-* **Category 2: Regional Powerhouses** (The Rise of the Australian Market)
-* **Category 3: Product Mix Optimization** (Balancing High-Volume Accessories vs. High-Margin Bikes)
-* **Category 4: The Return Leakage** (Plugging the Value Drain in High-Ticket Items)
+* **The "Pandemic Pivot" Trajectory** (Revenue Velocity & Year-over-Year Growth)
+* **Regional Powerhouses** (The Rise of the Australian Market)
+* **Product Mix Optimization** (Balancing High-Volume Accessories vs. High-Margin Bikes)
+* **The Return Leakage** (Plugging the Value Drain in High-Ticket Items)
 
-**SQL & DAX queries regarding various retail calculations can be found here [[Link to Script]](https://www.google.com/search?q=%23).**
 
-**An interactive Power BI dashboard used to report and explore sales trends can be found here [[Link to Dashboard]](https://www.google.com/search?q=%23).**
+
+**PowerQuery M Code regarding data preparation process of various tables can be found [[here]](Data Cleaning).**
+
+**DAX queries regarding various analytical calculations can be found [[here]](DAX Calculations).**
+
+**An interactive Power BI dashboard used to report and explore sales trends can be found [[here]](https://app.powerbi.com/view?r=eyJrIjoiMWZkNzNlNmQtNWQ4YS00NzEzLWI4NDEtNjE0ZjNhMzkyYmVkIiwidCI6IjAwMGY1Mjk5LWU2YTUtNDYxNi1hNTI4LWJjZTNlNGUyYjk4ZCIsImMiOjEwfQ%3D%3D).**
 
 ---
 
