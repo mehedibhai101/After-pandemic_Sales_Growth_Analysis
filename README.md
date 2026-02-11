@@ -42,7 +42,7 @@ The TurboFront analytics engine is built on a robust **Star Schema**, integratin
 
 TurboFront has successfully navigated the pandemic, generating **$24.9M in Total Revenue** and **$10.5M in Profit**. However, the growth is uneven. While **2021 saw a massive surge**, 2022 data indicates a potential plateau, suggesting the initial "bike boom" demand is softening. The business is heavily reliant on the **Bikes category**, which drives revenue but also carries the highest operational risk due to returns. A critical "Retention Gap" exists, with a low repeat purchase rate indicating that the influx of new pandemic customers is not converting into long-term loyalists.
 
-![1](Dashboard/static_overview.png)
+<img width="869" height="559" alt="Image" src="https://github.com/user-attachments/assets/23231602-4c19-4ec8-b8fc-cbf305417d27" />
 
 ---
 
@@ -54,7 +54,7 @@ TurboFront has successfully navigated the pandemic, generating **$24.9M in Total
 * **The 2022 Plateau.** Early 2022 performance shows a stabilization of the trend. Monthly revenue run rates have leveled off, signaling the need for new growth catalysts beyond the initial pandemic demand.
 * **Volume vs. Value.** While order volume increased, the **Average Order Value (AOV)** remained relatively stable, suggesting the growth was driven by acquiring *new* customers rather than upselling existing ones.
 
-[**Visualization: Monthly Revenue & Profit Trends (Line Chart)**]
+<img width="1149" height="345" alt="Image" src="https://github.com/user-attachments/assets/ff8e8bb5-1a13-43f9-a1ab-11362880294a" />
 
 ### 🌏 Regional Powerhouses
 
@@ -62,7 +62,7 @@ TurboFront has successfully navigated the pandemic, generating **$24.9M in Total
 * **The Australian Opportunity.** **Australia** has emerged as a high-growth secondary market. Despite a smaller population, the revenue density in this region is high, indicating a strong product-market fit for TurboFront's high-end commuter gear.
 * **European Lag.** Compared to the US and Pacific markets, **European territories (France, Germany, UK)** show slower growth rates, potentially due to stiffer local competition or supply chain bottlenecks.
 
-[**Visualization: Map Chart - Sales by Country & Territory**]
+<img width="1117" height="245" alt="Image" src="https://github.com/user-attachments/assets/fa81f6e6-5874-4ec9-8064-9c0647f7eded" />
 
 ### 🚲 Product Mix Optimization
 
@@ -70,7 +70,7 @@ TurboFront has successfully navigated the pandemic, generating **$24.9M in Total
 * **The "Accessories" Volume Driver.** While **Accessories** (Helmets, Tires, Bottles) contribute less to total revenue, they account for the highest *volume* of transactions. These items act as the entry point for many customers.
 * **Clothing Underperformance.** The **Clothing** category (Jerseys, Shorts) lags behind in both volume and revenue, representing a significant missed cross-selling opportunity given the high attachment potential with bike sales.
 
-[**Visualization: Product Performance Matrix - Top 10 Products by Revenue**]
+<img width="761" height="414" alt="Image" src="https://github.com/user-attachments/assets/5cc2e7cd-04f6-4c8f-8e3f-657c7edb83a1" />
 
 ### 📉 The Return Leakage
 
@@ -78,7 +78,7 @@ TurboFront has successfully navigated the pandemic, generating **$24.9M in Total
 * **Shorts & Sizing Issues.** Within the Clothing category, **Shorts** have a disproportionately high return rate, pointing to potential sizing inconsistencies or poor online fit guides.
 * **Component Compatibility.** Certain high-end components show elevated return rates, likely due to customers purchasing incompatible parts for DIY repairs. This "Education Gap" is costing the company in logistics and restocking fees.
 
-[**Visualization: Customer Demographics & Return Rate by Category**]
+<img width="1149" height="345" alt="Image" src="https://github.com/user-attachments/assets/ff8e8bb5-1a13-43f9-a1ab-11362880294a" />
 
 ---
 
@@ -111,21 +111,30 @@ Annual_Sales_Analytics_Report/
 ├── Dashboard/                            # Final visualization and reporting outputs
 │   ├── assets/                           # Visual elements used in reports (logos, icons, etc.)
 │   │   ├── Icons/                        # Collection of icons used in KPI Cards/Buttons
-│   │   ├── Images/                       # Images used in dashboard
-│   │   ├── Picture1.png                  # Temporal Demand & The "Golden Hour"
-│   │   ├── Picture2.png                  # The Sizing & Category Mix
-│   │   ├── Picture3.png                  # Product Portfolio Health
+│   │   │   ├── Button Icons/
+│   │   │   │   ├── Navigation/
+│   │   │   │   └── Others/
+│   │   │   ├── Formatting Icons/
+│   │   │   └── KPI Icons/
+│   │   ├── Background.png                # The background image used throughout the dashboard
 │   │   └── Theme.json                    # Custom Power BI color palette for dashboard
 │   ├── live_dashboard.md                 # Links to hosted Power BI Service report
 │   └── static_overview.pdf               # Exported PDF version of the final dashboard for quick viewing
 │
-├── Data Cleaning/                        # ETL process and Power Query transformations
-│   ├── calendar_table.m                  # M-script for generating a dynamic Calendar table
-│   └── sales_table.m                     # M-script for cleaning and transforming raw sales records
+├── Data Cleaning/                        # Power Query M Codes for cleaning tables of the dataset.
 │
 ├── Dataset/                              # The data foundation of the project
 │   ├── entity_relationship_diagram.svg   # Visual map of table connections and cardinality
-│   └── Maria's Kitchen.csv               # The primary raw data source containing transaction history
+│   ├── Sales Data/
+│   │   ├── TurboFront 2020 Sales.csv
+│   │   ├── TurboFront 2021 Sales.csv
+│   │   └── TurboFront 2022 Sales.csv
+│   ├── Categories Lookup.csv
+│   ├── Customer Lookup.csv
+│   ├── Subcategories Lookup.csv
+│   ├── Territory Lookup.csv
+│   ├── TurboFront Products.csv
+│   └── TurboFront Returns.csv
 │
 ├── DAX Calculations/                     # Business logic and analytical formulas
 │   ├── calculated_column.md              # Definitions for static row-level logic (e.g., hour buckets)
