@@ -11,11 +11,11 @@ Insights and recommendations are provided on the following key areas:
 * **Product Mix Optimization** (Balancing High-Volume Accessories vs. High-Margin Bikes)
 * **The Return Leakage** (Plugging the Value Drain in High-Ticket Items)
 
+https://github.com/user-attachments/assets/2db17c07-2201-4e43-a563-fa9c2998a221
 
+**PowerQuery M Code regarding data preparation process of various tables can be found [[here]](https://github.com/mehedibhai101/After-pandemic_Sales_Growth_Analysis/tree/main/Data%20Cleaning).**
 
-**PowerQuery M Code regarding data preparation process of various tables can be found [[here]](Data Cleaning).**
-
-**DAX queries regarding various analytical calculations can be found [[here]](DAX Calculations).**
+**DAX queries regarding various analytical calculations can be found [[here]](https://github.com/mehedibhai101/After-pandemic_Sales_Growth_Analysis/tree/main/DAX%20Calculations).**
 
 **An interactive Power BI dashboard used to report and explore sales trends can be found [[here]](https://app.powerbi.com/view?r=eyJrIjoiMWZkNzNlNmQtNWQ4YS00NzEzLWI4NDEtNjE0ZjNhMzkyYmVkIiwidCI6IjAwMGY1Mjk5LWU2YTUtNDYxNi1hNTI4LWJjZTNlNGUyYjk4ZCIsImMiOjEwfQ%3D%3D).**
 
