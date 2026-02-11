@@ -4,7 +4,6 @@
  * **Formula**: `DATEDIFF( 'Dim Customer'[Birth Date], TODAY(), YEAR )`
  * **Formatting**: `0`
 
-
 * **Age (groups)**: Segments customers into specific age brackets for demographic analysis.
   * **Formula**:
   ```dax
