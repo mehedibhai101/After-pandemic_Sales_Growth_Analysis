@@ -1,6 +1,6 @@
 let
     // Extracted the product category data from the CSV source.
-    Source = Csv.Document(File.Contents("C:\Users\perennial\OneDrive\Documents\Battle of Insights - PowerBI\Dataset\AdventureWorks Product Categories Lookup.csv"),[Delimiter=",", Columns=2, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    Source = Csv.Document(File.Contents("your_file_path.csv"),[Delimiter=",", Columns=2, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 
     // Promoted the first row to headers to identify Category keys and names.
     Promoted_Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
