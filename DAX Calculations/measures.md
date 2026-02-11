@@ -72,8 +72,7 @@ These measures calculate the percentage change compared to the previous month us
 ```dax
 VAR _pm = CALCULATE([Total Sales], DATEADD('Dim Date'[Date], -1, MONTH))
 RETURN 
- DIVIDE(([Total Sales] - _pm), _pm)
-
+    DIVIDE(([Total Sales] - _pm), _pm)
 ```
 
 * **MoM Growth% (Cost)**:
@@ -81,8 +80,7 @@ RETURN
 ```dax
 VAR _pm = CALCULATE([Total Cost], DATEADD('Dim Date'[Date], -1, MONTH))
 RETURN 
- DIVIDE(([Total Cost] - _pm), _pm)
-
+    DIVIDE(([Total Cost] - _pm), _pm)
 ```
 
 * **MoM Growth% (Profit)**:
@@ -90,8 +88,7 @@ RETURN
 ```dax
 VAR _pm = CALCULATE([Profit], DATEADD('Dim Date'[Date], -1, MONTH))
 RETURN 
- DIVIDE(([Profit] - _pm), _pm)
-
+    DIVIDE(([Profit] - _pm), _pm)
 ```
 
 * **MoM Growth% (Orders)**:
@@ -99,8 +96,7 @@ RETURN
 ```dax
 VAR _pm = CALCULATE([Total Orders], DATEADD('Dim Date'[Date], -1, MONTH))
 RETURN 
- DIVIDE(([Total Orders] - _pm), _pm)
-
+    DIVIDE(([Total Orders] - _pm), _pm)
 ```
 
 * **MoM Growth% (Qty Sold)**:
@@ -108,8 +104,7 @@ RETURN
 ```dax
 VAR _pm = CALCULATE([Total Qty Sold], DATEADD('Dim Date'[Date], -1, MONTH))
 RETURN 
- DIVIDE(([Total Qty Sold] - _pm), _pm)
-
+    DIVIDE(([Total Qty Sold] - _pm), _pm)
 ```
 
 * **MoM Growth% (AOV)**:
@@ -117,8 +112,7 @@ RETURN
 ```dax
 VAR _pm = CALCULATE([AOV], DATEADD('Dim Date'[Date], -1, MONTH))
 RETURN 
- DIVIDE(([AOV] - _pm), _pm)
-
+    DIVIDE(([AOV] - _pm), _pm)
 ```
 
 ### KPI Formatting & Logic:
