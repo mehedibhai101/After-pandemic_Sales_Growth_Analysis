@@ -1,4 +1,4 @@
-# 📊 Project Background: TurboFront Retail Analytics
+# 📊 Project Background: TurboFront Post-pandemic Sales Growth Analytics
 
 **TurboFront** is a global leader in high-performance cycling equipment and components. Historically known for equipping professional racing teams, the company faced an existential crisis during the 2020 pandemic as competitive events were cancelled worldwide. In a strategic pivot, TurboFront shifted its focus to **"Urban Resilience"**,targeting the booming market of commuters and fitness enthusiasts seeking alternatives to public transit.
 
