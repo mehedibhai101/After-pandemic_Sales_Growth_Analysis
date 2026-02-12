@@ -1,6 +1,6 @@
 # 📊 Measures & Calculations
 
-This documentation provides a comprehensive overview of the DAX measures and calculations used for the analysis. It outlines core financial KPIs, customer retention logic, and dynamic growth metrics used to drive business insights.
+This documentation provides a comprehensive overview of the DAX measures and calculations used for the analysis.
 
 ### Key Metrics and Formulas:
 
