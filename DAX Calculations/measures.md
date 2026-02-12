@@ -1,3 +1,7 @@
+# 📊 Measures & Calculations
+
+This documentation provides a comprehensive overview of the DAX measures and calculations used for the analysis. It outlines core financial KPIs, customer retention logic, and dynamic growth metrics used to drive business insights.
+
 ### Key Metrics and Formulas:
 
 * **Total Sales**: Sum of sales revenue from the fact table.
@@ -60,6 +64,8 @@
   * **Formatting**: `0`
 
 
+---
+
 
 ### Month-over-Month (MoM) Growth Metrics:
 
@@ -114,6 +120,8 @@ VAR _pm = CALCULATE([AOV], DATEADD('Dim Date'[Date], -1, MONTH))
 RETURN 
     DIVIDE(([AOV] - _pm), _pm)
 ```
+
+---
 
 ### KPI Formatting & Logic:
 
