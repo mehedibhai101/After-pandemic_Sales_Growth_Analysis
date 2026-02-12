@@ -1,6 +1,6 @@
-# 📊 Calculated Columns: Maria's Kitchen Annual Sales Analysis
+# 📊 Calculated Columns
 
-This documentation provides a comprehensive overview of the Calculated Tables and Calculated Columns used for the Maria's Kitchen analysis. It outlines the structural transformations and row-level logic used to drive business insights and product performance metrics.
+This documentation provides a comprehensive overview of the Calculated Tables and Calculated Columns used for the analysis. It outlines the structural transformations and row-level logic used to drive business insights and product performance metrics.
 
 ---
 
