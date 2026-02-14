@@ -17,7 +17,7 @@ https://github.com/user-attachments/assets/1f0313e2-69da-4655-8ab9-be12a88e4369
 
 **DAX queries regarding various analytical calculations can be found [[here]](https://github.com/mehedibhai101/After-pandemic_Sales_Growth_Analysis/tree/main/DAX%20Calculations).**
 
-**An interactive Power BI dashboard used to report and explore sales trends can be found [[here]](https://app.powerbi.com/view?r=eyJrIjoiMWZkNzNlNmQtNWQ4YS00NzEzLWI4NDEtNjE0ZjNhMzkyYmVkIiwidCI6IjAwMGY1Mjk5LWU2YTUtNDYxNi1hNTI4LWJjZTNlNGUyYjk4ZCIsImMiOjEwfQ%3D%3D).**
+**An interactive Power BI dashboard used to report and explore analysis can be found [[here]](https://app.powerbi.com/view?r=eyJrIjoiMWZkNzNlNmQtNWQ4YS00NzEzLWI4NDEtNjE0ZjNhMzkyYmVkIiwidCI6IjAwMGY1Mjk5LWU2YTUtNDYxNi1hNTI4LWJjZTNlNGUyYjk4ZCIsImMiOjEwfQ%3D%3D).**
 
 ---
 
